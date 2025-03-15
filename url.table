@@ -1,0 +1,6 @@
+CREATE TABLE public.urls (
+    short_id   VARCHAR(10)  NOT NULL,
+    long_url   TEXT         NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT NOW(),
+    CONSTRAINT urls_pkey PRIMARY KEY (short_id)
+);
