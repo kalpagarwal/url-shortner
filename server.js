@@ -5,7 +5,7 @@ const rate = require('./rateLimiting');
 const rateLimiter = rate(redisClient);
 const jwt = require("@fastify/jwt");
 const fastify = Fastify({ logger: true });
-const autoload = require('fastify-autoload')
+const autoload = require('fastify-autoload');
 const path = require("path");
 
 fastify.register(autoload, {
@@ -17,8 +17,8 @@ fastify.register(jwt, {
   sign:  {expiresIn: "200m"}
 });
 
-fastify.decorate('redisClient' , redisClient)
-fastify.decorate('rateLimiter' , rateLimiter)
+fastify.decorate('redisClient' , redisClient);
+fastify.decorate('rateLimiter' , rateLimiter);
 
 fastify.decorate("authenticate", async (request, reply) => {
   try {

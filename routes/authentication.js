@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const users = new Map();
 
-const refreshTokens = new Map()
+const refreshTokens = new Map();
 
 module.exports = async (fastify) => {
   fastify.post("/signup", async (request, reply) => {

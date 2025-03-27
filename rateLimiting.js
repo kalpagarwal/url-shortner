@@ -15,7 +15,7 @@ return async function rateLimiter(req, reply) {
     reply.code(429).send({ error: "Too many requests, slow down!" });
     return reply;
   }
-}
-}
+};
+};
 
 module.exports = rate;
