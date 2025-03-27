@@ -48,4 +48,10 @@ fastify.get("/:shortId", async (request, reply) => {
 
   reply.redirect(result.rows[0].long_url);
 });
+
+fastify.get("/", async (request, reply) => {
+  console.log("client connected");
+
+  reply.send();
+});
 }
